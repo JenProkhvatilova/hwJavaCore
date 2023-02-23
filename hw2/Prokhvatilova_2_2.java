@@ -1,4 +1,5 @@
-package HW;
+package javaCoreHW.hw2;
+import javaCoreHW.Main;
 public class Prokhvatilova_2_2 {
 
     public static void main(String[] args) {

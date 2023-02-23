@@ -1,6 +1,5 @@
-package HW;
-
-import java.util.Scanner;
+package javaCoreHW.hw4;
+import javaCoreHW.Main;
 
 public class Prokhvatilova_4_4 {
     private static void calculateSalaryMonthYear(float priceH, float tax){

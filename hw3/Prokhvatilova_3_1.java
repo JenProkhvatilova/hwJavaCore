@@ -1,5 +1,6 @@
-package HW;
-import java.util.Scanner;
+package javaCoreHW.hw3;
+import javaCoreHW.Main;
+
 public class Prokhvatilova_3_1 {
 
     private static String determineNumberType(int num) {

@@ -1,9 +1,6 @@
-package HW;
-
-import java.util.Scanner;
-
+package javaCoreHW.hw3;
+import javaCoreHW.Main;
 public class Prokhvatilova_3_3 {
-
     private static double calculateSalaryMonth(int month, float hourlyRate) {
         byte workingDays = 0;
         int i;

@@ -1,6 +1,5 @@
-package HW;
-import java.util.Scanner;
-
+package javaCoreHW.hw2;
+import javaCoreHW.Main;
 
 public class Prokhvatilova_2_3 {
 

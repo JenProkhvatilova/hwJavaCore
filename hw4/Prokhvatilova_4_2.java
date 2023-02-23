@@ -1,4 +1,5 @@
-package HW;
+package javaCoreHW.hw4;
+import javaCoreHW.Main;
 import java.util.Arrays;
 
 public class Prokhvatilova_4_2 {
@@ -57,7 +58,6 @@ public class Prokhvatilova_4_2 {
                 repeat++;
             }
         }
-
         return array;
     }
 
