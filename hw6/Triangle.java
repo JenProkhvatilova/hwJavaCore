@@ -24,9 +24,11 @@ public class Triangle {
         this.triangleSideAB = triangleSideAB;
         this.triangleSideAC = triangleSideAC;
         this.triangleAngleA = triangleAngleA;
-        this.triangleAngleB = (int) Math.asin((triangleSideAB / triangleSideAC) * Math.sin(triangleAngleA));
+        this.triangleAngleB = (int) Math.toDegrees(Math.asin((triangleSideAB / triangleSideAC) *
+                Math.sin(Math.toRadians(triangleAngleA))));
         this.triangleAngleC = 180 - triangleAngleA - triangleAngleB;
-        this.triangleSideBC = (triangleSideAC * Math.sin(triangleAngleB)) / Math.sin(triangleAngleA);
+        this.triangleSideBC = (triangleSideAC * Math.sin(Math.toRadians(triangleAngleB))) /
+                Math.sin(Math.toRadians(triangleAngleA));
     }
 
 
@@ -51,6 +53,40 @@ public class Triangle {
               Math.sin(Math.toRadians(triangleAngleC))));
       this.triangleAngleB = 180 - triangleAngleA - triangleAngleC;
   }
+
+    public Triangle (int triangleAngleC, int triangleAngleA, double triangleSideAC) {
+        this.triangleAngleA = triangleAngleA;
+        this.triangleAngleC = triangleAngleC;
+        this.triangleAngleB = 180 - triangleAngleA - triangleAngleC;
+        this.triangleSideAC = triangleSideAC;
+        this.triangleSideAB = Math.sqrt(Math.pow(triangleSideAC, 2) + Math.pow(triangleSideBC, 2) - 2 * triangleSideAC *
+                triangleSideBC * Math.cos(Math.toRadians(triangleAngleC)));
+        this.triangleSideBC = Math.sqrt(Math.pow(triangleSideAC, 2) + Math.pow(triangleSideAB, 2) - 2 * triangleSideAC *
+                triangleSideAB * Math.cos(Math.toRadians(triangleAngleA)));
+    }
+
+    public Triangle (int triangleAngleA, double triangleSideAB, int triangleAngleB) {
+        this.triangleAngleA = triangleAngleA;
+        this.triangleAngleB = triangleAngleB;
+        this.triangleAngleC = 180 - triangleAngleA - triangleAngleB;
+        this.triangleSideAB = triangleSideAB;
+        this.triangleSideBC = (triangleSideAB * Math.sin(Math.toRadians(triangleAngleB))) /
+                Math.sin(Math.toRadians(triangleAngleC));
+        this.triangleSideAC = (triangleSideAB * Math.sin(Math.toRadians(triangleAngleA))) /
+                Math.sin(Math.toRadians(triangleAngleC));
+    }
+
+    public Triangle (double triangleSideBC, int triangleAngleB, int triangleAngleC) {
+        this.triangleAngleB = triangleAngleB;
+        this.triangleAngleC = triangleAngleC;
+        this.triangleAngleA = 180 - triangleAngleB - triangleAngleC;
+        this.triangleSideBC = triangleSideBC;
+        this.triangleSideAB = (triangleSideBC * Math.sin(Math.toRadians(triangleAngleB))) /
+                Math.sin(Math.toRadians(triangleAngleA));
+        this.triangleSideAC = (triangleSideBC * Math.sin(Math.toRadians(triangleAngleC))) /
+                Math.sin(Math.toRadians(triangleAngleA));
+    }
+
 
     public double getTriangleSideAB() {
         return triangleSideAB;
@@ -94,7 +130,4 @@ public class Triangle {
  - геттери
  - підрахунку периметру трикутника
  - підрахунку площі трикутника
-
-4. Описати клас кредит. (Самостійно визначаєте поля і методи)
-
  */

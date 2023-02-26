@@ -6,8 +6,8 @@ public class Product {
     private String productDescription;
     private boolean productPresence;
 
-    public Product(String productName, int productArticleNumber,
-                   float productPrice, String productDescription, boolean productPresence) {
+    public Product(String productName, int productArticleNumber, float productPrice, String productDescription,
+                   boolean productPresence) {
         this.productName = productName;
         this.productArticleNumber = productArticleNumber;
         this.productPrice = productPrice;
@@ -20,15 +20,13 @@ public class Product {
         this.productArticleNumber = productArticleNumber;
     }
 
-    public Product(String productName, int productArticleNumber,
-                   String productDescription) {
+    public Product(String productName, int productArticleNumber, String productDescription) {
         this.productName = productName;
         this.productArticleNumber = productArticleNumber;
         this.productDescription = productDescription;
     }
 
-    public Product(String productName, int productArticleNumber,
-                   float productPrice, boolean productPresence) {
+    public Product(String productName, int productArticleNumber, float productPrice, boolean productPresence) {
         this.productName = productName;
         this.productArticleNumber = productArticleNumber;
         this.productPrice = productPrice;
