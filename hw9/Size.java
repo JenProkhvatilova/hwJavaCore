@@ -1,23 +1,18 @@
 package javaCoreHW.hw9;
 
 public enum Size {
-    S("S", 165, 84, 66, 92),
-    M("M", 170, 88, 72, 96),
-    L("L", 175, 92, 78, 100);
+    S("S", 50, 60),
+    M("M", 60, 70),
+    XL("XL", 70, 80);
 
     private final String abbreviation;
-    private final int height;
-    private final int chestGirth;
-    private final int waistGirth;
-    private final int hipGirth;
+    private final int width;
+    private final int length;
 
-
-    Size(String abbreviation, int height, int chestGirth, int waistGirth, int hipGirth) {
+    Size(String abbreviation, int width, int length) {
         this.abbreviation = abbreviation;
-        this.height = height;
-        this.chestGirth = chestGirth;
-        this.waistGirth = waistGirth;
-        this.hipGirth = hipGirth;
+        this.width = width;
+        this.length = length;
     }
 
     public String getAbbreviation() {
@@ -25,16 +20,10 @@ public enum Size {
     }
 
     public int getWidth() {
-        return height;
+        return width;
     }
 
-    public int getChestGirth() {
-        return chestGirth;
-    }
-    public int getWaistGirth() {
-        return waistGirth;
-    }
-    public int getHipGirth() {
-        return hipGirth;
+    public int getLength() {
+        return length;
     }
 }
