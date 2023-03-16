@@ -16,9 +16,6 @@ package javaCoreHW.hw8.animals.birds;
         public void makeSound(){
             System.out.println("Cheep");
         }
-        public void swim() {
-            System.out.println("Drown");
-        }
     }
 
 
