@@ -4,10 +4,6 @@ package javaCoreHW.hw8.animals.birds;
         public Crane (String name, int age, String species) {
             super(name, age, species);
         }
-        @Override
-        public void move() {
-            System.out.println("Flying");
-        }
     }
 
 

@@ -6,6 +6,7 @@ package javaCoreHW.hw8.animals.birds;
         }
         @Override
         public void move() {
+            System.out.println("Flying");
         }
         @Override
         public void eat(){
